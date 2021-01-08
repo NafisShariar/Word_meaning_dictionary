@@ -26,8 +26,8 @@ def translate(w):
 
 word = input("Enter your desired word to find: ")
 output = translate(word)
-if type(output) == list:
+if type(output) == list:  # for words with two or more meanings we have to display them sequentially not in lists
     for item in output:
         print(item)
-else:
+else:  # but for every other outputs like prompt or error its ok to just print them
     print(output)
